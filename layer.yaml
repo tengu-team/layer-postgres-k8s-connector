@@ -1,0 +1,5 @@
+includes: ['layer:basic',
+           'layer:leadership',
+           'interface:pgsql',
+           'interface:kubernetes-deployer']
+repo: git@github.com:tengu-team/layer-postgres-k8s-connector.git

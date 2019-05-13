@@ -1,0 +1,8 @@
+options:
+  database:
+    type: string
+    default: ""
+    description: |
+      The Database that will be used by the k8s cluster
+
+

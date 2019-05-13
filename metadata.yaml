@@ -1,0 +1,19 @@
+name: postgres-k8s-connector
+summary: This charm deploys a connector between k8s-cluster and postgress
+maintainer: Sebastien Pattyn <sebastien.pattyn@tengu.io>
+description: |
+  This charm will connect your Postgress DB with a kubernetes cluster
+  and make sure that the k8s cluster knows the credentials as a sceret to acces the
+  created database on postgres.
+tags:
+  - misc
+subordinate: true
+requires:
+  kube-host:
+    interface: juju-info
+    scope: container
+  kubernetes-deployer:
+    interface: kubernetes-deployer
+  postgres:
+    interface: pgsql
+series: ['bionic']
